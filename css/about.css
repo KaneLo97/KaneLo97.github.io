@@ -1,0 +1,67 @@
+body {
+    background-color: #F0F8FF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.experience, .technical_skills {
+    background-color:#708090;
+    color: white;
+    padding: 2em;
+}
+
+.experience_container, .technical_skills_container, .honours_container {
+    margin: 2em auto;
+    text-align: left;    
+}
+
+.experience_container {
+    width: 60%;
+}
+
+.technical_skills_container {
+    width: 50%;
+}
+
+.honours_container {
+    width: 40%;
+    height: 7em;
+}
+
+.honours, .contact, .profile_info {
+    padding: 2em;
+}
+
+.header {
+    padding-top: 1em;
+}
+
+ul.skills {
+   list-style-type: circle;
+}
+
+.image {
+    position: relative;
+    width: 10em;
+    float: left;
+    margin-right: 2em;
+}
+
+.profile-image {
+    height: 10em;
+    border-radius: 50%;
+}
+
+.footer {
+    background-color:#ADD8E6;
+    padding: 2em;
+}
+
+.footer_link {
+    margin: 1em;
+}
+
+@media only screen and (max-width: 900px) {
+    .image {
+        float: none;
+    }
+}

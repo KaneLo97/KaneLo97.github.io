@@ -1,26 +1,26 @@
 img {
-    width:100%;
-    height:30em;
-    opacity:80%;
+    width: 100%;
+    height: 30em;
+    opacity: 80%;
 }
 
 .banner {
-    position:relative;
+    position: relative;
 }
 
 .banner img {
-    width:100%
+    width: 100%
 }
 
 .banner .container {
     position: absolute; 
-    left:0; 
-    right:0; 
-    top:50%; 
+    left: 0; 
+    right: 0; 
+    top: 50%; 
     text-align:left; 
-    transform:translateY(-50%)
+    transform: translateY(-50%)
 }
 
 .about, .description {
-    margin-top:2em;
+    margin-top: 2em;
 }
