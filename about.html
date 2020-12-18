@@ -3,6 +3,7 @@
     <head>
         <title> My Personal Website </title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -14,7 +15,7 @@
         <h1 class="header text-center">About Me</h1>
         <div class="container">
             <div class="row profile_info">
-                <div class="text-right col-md-4">
+                <div class="text-center col-md-4">
                     <img class="profile-image" src="images/profile.jpg" alt="profile">
                 </div>
                 <div class="col-md-8">
@@ -42,9 +43,10 @@
                 <h2 class="text-center">Honours</h2>
                 <div class="container honours_container">
                     <div class="text-center"><img class="image" src="images/sfu_logo.png" alt="sfu"></div>
-                    <h5><a href="pdfs/President.pdf" target="_blank">View Kane&apos;s President&apos;s Honour Roll</a></h5>
-                    <h5><a href="pdfs/Dean.pdf" target="_blank">View Kane&apos;s Dean&apos;s Honour Roll</a></h5>
-                    
+                    <div class="honour_links">
+                        <h5><a href="pdfs/President.pdf" target="_blank">View Kane&apos;s President&apos;s Honour Roll</a></h5>
+                        <h5><a href="pdfs/Dean.pdf" target="_blank">View Kane&apos;s Dean&apos;s Honour Roll</a></h5>
+                    </div>
                 </div>
             </div>
             <div class="technical_skills">
@@ -59,15 +61,14 @@
                 </div>
             </div>
             <div class="contact">
-                <h2 class="text-center"> Contact Me</h2>
-                <div class="container">
-                    <div class="text-center contact_me">
-                        <img src="images/contact.png" alt="contact_image">
+                <h2 class="text-center">Contact Me</h2>
+                    <div class="container text-center contact_me">
+                        <div class="text-center"><img class="contact_image" src="images/contact.png" alt="contact_image"/></div>
                         <h3>Are you interested in my skills and experience? Let's collaborate</h3>
                         <p>Have a look at my current github at <a href="https://github.com/KaneLo97">Kane&apos;s github</a>
                         <p>Contact me via one of the contact methods in the footer or call me at 6043384873.</p>
                     </div>
-                </div>
+                
             </div>
 
             <div class="text-center  footer">

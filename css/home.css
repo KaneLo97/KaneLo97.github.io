@@ -24,3 +24,13 @@ img {
 .about, .description {
     margin-top: 2em;
 }
+
+@media only screen and (max-width: 500px) {
+    img {
+        height: 40em;
+    }
+    .honours_container, .technical_skills_container {
+        width: 100%;
+        height: 10em;
+    }
+}
