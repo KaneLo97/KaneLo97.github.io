@@ -1,0 +1,12 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer {
+    background-color:#ADD8E6;
+    padding: 2em;
+}
+
+.footer_link {
+    margin: 1em;
+}

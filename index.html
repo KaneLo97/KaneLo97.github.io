@@ -8,6 +8,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/home.css">
     </head>
     <body>
@@ -15,21 +16,73 @@
             <img src="images/mauritius.png" alt="Responsive image">
             <div>
                 <div class="container">
-                    <div class="text-center">
-                        <h1><strong>KANE LO HOG TIAN</strong></h1>
-                    </div>
-                    <div class="description alert alert-primary">
-                        <h5>
-                            I am a 4th year Computer Science Student from SFU&comma; British Columbia.
-                            I have 8 months Co-op experience in Greenlight Innovation as Information Software Developer from September 2020 to May 2021 and in Kongsberg Mesotech as Software Engineer from January 2019 to August 2019. 
-                            My current GPA is 3.86 and I have received the President&apos;s Honour Roll and Dean&apos;s Honour Roll.
-                        </h5>
+                    <div>
+                        <h1 class="text-center"><strong>KANE LO</strong></h1>
+                        <h5 class="text-center"><b><i>4th year Computer Science Student from SFU</i></b></h5>
                     </div>
                     <div class="text-center">
                         <a class="about btn btn-primary" href="about.html">More about me</a>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="home_content">
+            <div class="description container" id="descript" >
+                <h3 class="text-center">Hello and Welcome</h3><br>
+                <h5>I have 8 months Co-op experience in Greenlight Innovation as Information Software Developer from September 2020 to May 2021 and in Kongsberg Mesotech as Software Engineer from January 2019 to August 2019.</h5><br>
+                <h5>My current GPA is 3.86 and I have received the President&apos;s Honour Roll and Dean&apos;s Honour Roll.</h5><br>
+                <h5>I am passionate in soccer&comma; software and web development and volunteering.</h5>
+            </div>
+            <hr>
+            <div class="container apps_description">
+                <h3 class="text-center">Applications developed</h3><br>
+                <ul>
+                    <li>
+                        <h4>Kongsberg Co-op Software Tablet Application</h4>
+                        <h5>I developed an android tablet application and a desktop application using Qt framework and C++.</h5>
+                        <h5>The android application is developed to replace the physical remote control which is used to control the sonar systems developed by the company. The sonar systems are connected to the desktop computer and will communicate to the desktop application.</h5>
+                        <h5>The android application and desktop application can act as a server and a client which can connect to each other by bluetooth or ethernet option, giving the user different connection options.</h5>
+                        <h5>The remote control application not only has a keypad but can also display sensor values received from the sonar systems as well as display a graph showing the patterns in the temperature and depth sensor values against time.</h5>
+                        <div class="container images_container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="images/android_app_connection.jpg">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="images/android_app_key.jpg">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="images/android_app_key_nightversion.jpg">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="images/android_app_cursor.jpg">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="images/android_app_graph.jpg">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="images/android_app_key_catch.jpg">
+                                </div>
+                            </div>
+                        </div>   
+                    <li>
+                        <h4>Online Hangman Game</h4>
+                        <h5>Using SpringBoot web framework&comma; Java&comma; IntelliJ&comma; HTML and CSS&comma; I developed an online Hangman game
+                        where the player will win a game by guessing a word randomly picked by the system and can make 7 incorrect guesses before losing the game.</h5><br>
+                        <h5>You can have a look at my repository <a href="https://github.com/KaneLo97/Online-Hangman/"> Online Hangman Game </h5><br>
+                        <div class="container images_container">
+                            <img class="hangman" src="images/hangman_game.png">
+                            <img class="hangman" src="images/hangman_game1.png">
+                        </div>   
+                    </li>  
+                </ul>
+            </div>
+            <div class="text-center footer">
+            <a class="footer_link" href="mailto:kane.klht@gmail.com" target="_blank">Mail Address</a>
+            <a class="footer_link" href="https://www.linkedin.com/in/kane-lo-hog-tian/" target="_blank">LinkedIn</a>
+            <a class="footer_link" href="https://www.instagram.com/kanelo_97/" target="_blank">Instagram</a>
+            <p class="copyright">Copyright © 2020 Kane Lo Hog Tian</p>
+        </div>
         </div>
     </body>
 </html>
