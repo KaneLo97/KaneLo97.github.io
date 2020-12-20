@@ -22,7 +22,7 @@
     transform: translateY(-50%)
 }
 
-.about {
+.about, .hangman_button {
     margin-top: 10em;
 }
 
@@ -52,8 +52,4 @@ ul li {
     .hangman {
         width: 20em;
     }
-}
-
-@media only screen and (max-width: 500px) {
-   
 }
