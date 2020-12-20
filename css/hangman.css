@@ -1,0 +1,32 @@
+body {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,201,152,1) 0%, rgba(6,149,177,1) 68%);
+}
+
+.gameContainer {
+    margin-top: 10%;
+    
+}
+
+input {
+    width: 2em;
+    margin: 0.1em;
+}
+
+ul li {
+    list-style-type: none;  
+}
+
+ul li.guessBox{
+    display: inline;
+}
+
+
+.numberGuesses {
+    color: red;
+}
+
+.footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}

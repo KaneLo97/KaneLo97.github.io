@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html lang = "en">
+    <head>
+        <title>Hangman Game</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/hangman.css">
+    </head>
+    <body>
+        <div class="gameContainer container">
+            <div class="text-center numberGuesses">
+                <ul>
+                    <li><h3 class="text-center" id="totalGuesses">Total Guesses&colon; 0 </h3></li>
+                    <li><h3 class="text-center" id="incorrectGuesses">Incorrect Guesses&colon; 0 </h3></li>
+                    <li><h3 class="text-center" id="alreadyGuessedCharacters">Guesses Made&colon; None </h3></li>
+                </ul>
+            </div><br><br>
+            <h5 class="text-center guessedWord"></h5>
+            <div class="text-center" id="guessContainer">
+                <label><b>Enter your guess</b></label>
+                <input type="text" name="guess" maxlength=1 id="guess" /><br><br>
+                <a class="btn btn-primary " href="hangman.html">Start New Game</a>        
+            </div><br> 
+        </div>
+        <div class="text-center footer">
+            <a class="footer_link" href="mailto:kane.klht@gmail.com" target="_blank">Mail Address</a>
+            <a class="footer_link" href="https://www.linkedin.com/in/kane-lo-hog-tian/" target="_blank">LinkedIn</a>
+            <a class="footer_link" href="https://www.instagram.com/kanelo_97/" target="_blank">Instagram</a>
+            <p class="copyright">Copyright © 2020 Kane Lo Hog Tian</p>
+        </div>
+
+        <script src="js/hangman.js"></script>
+    </body> 
+</html>
