@@ -15,7 +15,6 @@ $(document).ready(function() {
         htmlContent += '<li class="guessBox"><input type="text" class="form-control box" id="'+i+'" maxlength=1 disabled></li>'; 
     }
     htmlContent += "</ul></div>";
-    console.log(randomWord)
     $(".guessedWord").append(htmlContent);
 });
 
