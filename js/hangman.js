@@ -1,3 +1,78 @@
+var randomWord = "";
+var totalGuesses = 0;
+var incorrectGuess = 0;
+var correctGuess = 0;
+var isCorrectGuess = false;
+var guessedCharacterList = "";
+var maxGuesses = 20;
+var maxIncorrectGuesses = 8;
+
+$(document).ready(function() {
+    var index =Math.floor(Math.random() * (wordlist.length));
+    randomWord = wordlist[index];  
+    var htmlContent = "<ul>";
+    for(var i=0; i<randomWord.length; i++) {
+        htmlContent += '<li class="guessBox"><input type="text" class="form-control box" id="'+i+'" maxlength=1 disabled></li>'; 
+    }
+    htmlContent += "</ul></div>";
+    console.log(randomWord)
+    $(".guessedWord").append(htmlContent);
+});
+
+$("#guess").on("input", function(){
+    guessEntered = $(this).val();
+    var isCorrectGuess = false;
+    if (guessEntered !== '' && !isCharactersAlreadyEntered(guessEntered)) { // if the player is not deleting a character.
+        if (guessedCharacterList.length === 0) { //player has not yet make any guesses
+            guessedCharacterList += guessEntered;
+        } else if (guessedCharacterList.indexOf(guessEntered) == -1) {
+                guessedCharacterList += ", " + guessEntered;
+        }
+        document.getElementById("alreadyGuessedCharacters").innerHTML = "Guesses Made&colon; " + guessedCharacterList;
+        for(var i = 0; i < randomWord.length; i++) {
+            if(guessEntered === randomWord[i]) {
+                $("#" + i).attr("value", guessEntered);
+                correctGuess += 1;
+                console.log(correctGuess);
+                isCorrectGuess = true;
+            }
+        }
+        totalGuesses += 1;
+        document.getElementById("totalGuesses").innerHTML = "Total Guesses&colon; " + totalGuesses;
+
+        if (!isCorrectGuess) {
+            incorrectGuess += 1;
+            document.getElementById("incorrectGuesses").innerHTML = "Incorrect Guesses&colon; " + incorrectGuess;
+        }
+        determineGameStatus();
+    }
+});
+
+function isCharactersAlreadyEntered(guessEntered) {
+    if ($.inArray(guessEntered, guessedCharacterList) == -1) { //player has not yet made this guess
+        document.getElementById("alreadyEntered").innerHTML = "";
+        return false;
+    }
+    document.getElementById("alreadyEntered").innerHTML = "<div class='alert alert-warning'><em>You already entered this guess&colon; " + guessEntered + ".</em></div><br>";
+    return true;
+}
+
+function determineGameStatus() {
+    console.log(correctGuess);
+    if (totalGuesses > maxGuesses) {
+        $("#hangmanContainer").hide();
+        document.getElementById("gameStatus").innerHTML = "<div class='alert alert-danger'><h4 class='text-center'>Game Lost</h4><p class='text-center'>You have exceeded the maximum number of total guesses allowed.<br>The word to be guessed was <q><b><i>" + randomWord + "</i></b></q>.</p></div><br>";
+    } else if (incorrectGuess > maxIncorrectGuesses) {
+        $("#hangmanContainer").hide();
+        document.getElementById("gameStatus").innerHTML = "<div class='alert alert-danger'><h4 class='text-center'>Game Lost</h4><p class='text-center'>You have exceeded the maximum number of incorrect guesses allowed.<br>The word to be guessed was <q><b><i>" + randomWord + "</i></b></q>.</p></div><br>";
+    } else if (correctGuess === randomWord.length) {
+        $("#hangmanContainer").hide();
+        document.getElementById("gameStatus").innerHTML = "<div class='alert alert-success'><h4 class='text-center'>Congrats!! Game Won</h4><p class='text-center'>You have correctly guessed the word <q><b><i>" + randomWord + "</i></b></q></div><br>";
+    }
+}
+
+
+
 
 var wordlist = ["aback","abacus","abalone","abandon","abase","abash","abate","abater","abbas","abbe","abbey",
 "abbot","abbreviate","abc","abdicate","abdomen","abdominal","abduct","abed","aberrant","aberrate",
@@ -1991,54 +2066,5 @@ var wordlist = ["aback","abacus","abalone","abandon","abase","abash","abate","ab
 "zigging","zigzag","zigzagging","zilch","zinc","zing","zip","zippy","zircon","zirconium",
 "zloty","zodiac","zodiacal","zombie","zone","zoo","zoology","zoom","zounds","zucchini",
 "zygote"]
-
-var randomWord = "";
-var totalGuesses = 0;
-var incorrectGuess = 0;
-var correctGuess = 0;
-var guessedCharacterList = "";
-
-$(document).ready(function() {
-    var index =Math.floor(Math.random() * (wordlist.length));
-    randomWord = wordlist[index];  
-    var htmlContent = "<ul>";
-    for(var i=0; i<randomWord.length; i++) {
-        htmlContent += '<li class="guessBox"><input type="text" class="box" id="'+i+'" maxlength=1 disabled></li>'; 
-    }
-    htmlContent += "</ul></div>";
-    $(".guessedWord").append(htmlContent);
-});
-
-$("#guess").on("input", function(){
-    guessEntered = $(this).val();
-    var correctGuess = false;
-    if (guessEntered !== '') { // if the player is not deleting a character.
-        if (guessedCharacterList.length === 0) { //player has not yet make any guesses
-            guessedCharacterList += guessEntered;
-        } else if (guessedCharacterList.indexOf(guessEntered) == -1) {
-                guessedCharacterList += ", " + guessEntered;
-        }
-        document.getElementById("alreadyGuessedCharacters").innerHTML = "Guesses Made&colon; " + guessedCharacterList;
-        for(var i = 0; i < randomWord.length; i++) {
-            if(guessEntered === randomWord[i]) {
-                $("#" + i).attr("value", guessEntered);
-                correctGuess = true;
-            }
-        }
-        totalGuesses += 1;
-        document.getElementById("totalGuesses").innerHTML = "Total Guesses&colon; " + totalGuesses;
-
-        if (correctGuess === false) {
-            incorrectGuess += 1;
-            document.getElementById("incorrectGuesses").innerHTML = "Incorrect Guesses&colon; " + incorrectGuess;
-        }
-    }
-});
-
-
-// function setCharAt(str,index,chr) {
-//     if(index > str.length-1) return str;
-//     return str.substring(0,index) + chr + str.substring(index+1);
-// }
 
 

@@ -3,8 +3,7 @@ body {
 }
 
 .gameContainer {
-    margin-top: 10%;
-    
+    margin-top: 10%; 
 }
 
 input {
@@ -20,13 +19,40 @@ ul li.guessBox{
     display: inline;
 }
 
+.alert {
+    margin: auto;
+}
 
 .numberGuesses {
     color: red;
+}
+
+.form-control {
+    display: inline-block;
+    width: 2.5em;
+}
+
+.header {
+    background-color:#008080;
+    color: white;
+    padding: 1em;
 }
 
 .footer {
     bottom: 0;
     position: absolute;
     width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+    .footer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .alert{
+        margin: 0;
+        width: 100%;
+    }
 }
