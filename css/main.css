@@ -15,9 +15,3 @@ body {
     height: 10em;
     border-radius: 50%;
 }
-
-.footer {
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-}
