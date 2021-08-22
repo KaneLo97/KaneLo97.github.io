@@ -1,0 +1,40 @@
+body {
+    background-image: url("../images/work.png"); 
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card, a {
+    width: 50%;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #000000;
+    color: #DAA520;
+}
+
+.card {
+    border-radius: 2em;
+}
+
+.title {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 950px) {
+    .card {
+        width: 100%;
+    }
+}
+

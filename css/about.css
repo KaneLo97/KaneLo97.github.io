@@ -48,12 +48,6 @@ ul.skills {
     width: 10em;
 }
 
-.profile-image {
-    height: 10em;
-    border-radius: 50%;
-    float: right
-}
-
 @media only screen and (max-width: 900px) {
     .image {
         float: none;
