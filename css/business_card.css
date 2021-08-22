@@ -2,7 +2,6 @@ body {
     background-image: url("../images/work.png"); 
     background-size: cover;
     height: 100%;
-    overflow: hidden;
 }
 
 .card, a.info_links {
@@ -36,22 +35,9 @@ a:hover {
     color: #FFFFFF;
 }
 
-.footer {
-    bottom: 0em;
-    position: absolute;
-    width: 100%;
-}    
-
 @media only screen and (max-width: 950px) {
     .card {
         width: 100%;
     }
 }
-
-@media only screen and (max-width: 600px) {
-    .footer {
-        position: initial;
-    }
-}
-
 
