@@ -14,21 +14,16 @@ body {
 .profile-image {
     height: 10em;
     border-radius: 50%;
-    float: right
+}
+
+.footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
 
 @media only screen and (max-width: 900px) {
-    .image {
-        float: none;
-    }
-}
-
-@media only screen and (max-width: 950px) {
-    .profile-image {
-        float: none;
-    }
-    .honours_container {
-        width: 60%;
-        height: 12em;
+    .footer {
+        display: none;
     }
 }

@@ -38,18 +38,6 @@ ul li.guessBox{
     padding: 1em;
 }
 
-.footer {
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-}
-
-@media only screen and (max-width: 900px) {
-    .footer {
-        display: none;
-    }
-}
-
 @media only screen and (max-width: 500px) {
     .alert{
         margin: 0;

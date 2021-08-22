@@ -5,7 +5,7 @@ body {
     overflow: hidden;
 }
 
-.card, a {
+.card, a.info_links {
     width: 50%;
     font-family: 'Times New Roman', Times, serif;
     background-color: #000000;
@@ -26,6 +26,10 @@ ul {
 
 a {
     text-decoration: underline;
+}
+
+.image_container {
+    margin-bottom: 2em;
 }
 
 a:hover {
