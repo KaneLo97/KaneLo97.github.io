@@ -27,12 +27,6 @@ a {
     text-decoration: underline;
 }
 
-.footer {
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-}
-
 .image_container {
     margin-bottom: 2em;
 }
@@ -47,9 +41,4 @@ a:hover {
     }
 }
 
-@media only screen and (max-width: 650px) {
-    .footer {
-        position: initial;
-    }  
-}
 
