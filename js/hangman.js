@@ -5,7 +5,7 @@ let correctGuess = 0;
 let isCorrectGuess = false;
 let guessedCharacterList = "";
 
-const MAX_GUESSES = 20;
+const MAX_GUESSES = 15;
 const MAX_INCORRECT_GUESSES = 8;
 
 $(document).ready(function() {
