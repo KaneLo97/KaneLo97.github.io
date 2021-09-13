@@ -7,11 +7,16 @@ body {
     padding: 2em;
 }
 
-.footer_link {
+.footerLink {
     margin: 1em;
 }
 
 .profile-image {
     height: 10em;
     border-radius: 50%;
+}
+
+.icon {
+    width: 2em;
+    height: 2em;
 }

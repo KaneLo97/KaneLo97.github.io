@@ -45,11 +45,7 @@ ul li {
     padding-top: 1.5em;
 }
 
-ul #button_list {
-    display: inline ;
-}
-
-.app_title {
+.appTitle {
     text-decoration: underline;
 }
 

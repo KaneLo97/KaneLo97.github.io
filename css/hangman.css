@@ -15,7 +15,7 @@ ul li {
     list-style-type: none;  
 }
 
-ul li.guessBox{
+ul li.guessBox {
     display: inline;
 }
 

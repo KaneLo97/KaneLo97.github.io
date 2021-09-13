@@ -4,7 +4,7 @@ body {
     height: 100%;
 }
 
-.card, a.info_links {
+.card, a.infoLinks {
     width: 50%;
     font-family: 'Times New Roman', Times, serif;
     background-color: #000000;
@@ -23,7 +23,7 @@ ul {
     list-style-type: none;
 }
 
-a {
+a.infoLinks {
     text-decoration: underline;
 }
 
@@ -31,7 +31,7 @@ a {
     margin-bottom: 2em;
 }
 
-a:hover {
+a.infoLinks:hover {
     color: #FFFFFF;
 }
 

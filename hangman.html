@@ -11,24 +11,47 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="shortcut icon" href="images/favicon.png">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="css/hangman.css">
     </head>
     <body>
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+                <img class="icon" src="images/favicon.png"></img>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_content" aria-controls="navbar_content" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar_content">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="hangman.html">Hangman Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="business_card.html">My Business Card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <div class="header text-center">
-            <h3>HANGMAN GAME</h3>
+            <h3>WELCOME TO MY HANGMAN GAME</h3>
         </div>
         <div class="gameContainer container">
             <div id="gameStatus"></div>
-            <div class="row alert alert-info numberGuesses">
-                <div class="col-md-6">
-                    <h5 class="text-center" id="totalGuesses">Total Guesses&colon; 0 </h5>
-                </div>
-                <div class="col-md-6">
-                    <h5 class="text-center" id="incorrectGuesses">Incorrect Guesses&colon; 0 </h5>
-                </div>
-                <div class="col-md-12">
-                    <div class="text-center"><em id="alreadyGuessedCharacters">Guesses Made&colon;</em></div>
+            <div class="alert alert-info">
+                <h4 class="text-center">Game Info</h4>
+                <div class="row alert alert-info numberGuesses">
+                    <div class="col-md-6">
+                        <h5 class="text-center" id="totalGuesses">Total Guesses: 0 </h5>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="text-center" id="incorrectGuesses">Incorrect Guesses: 0 </h5>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="text-center"><em id="alreadyGuessedCharacters">Guesses Made:</em></div>
+                    </div>
                 </div>
             </div><br>
 
@@ -43,12 +66,11 @@
         </div>
         <div class="text-center">
             <a class="btn btn-primary " href="hangman.html">Start New Game</a>
-            <a class="btn btn-light " href="index.html">Home</a>
         </div>
         <div class="text-center footer">
-            <a class="footer_link" href="mailto:kane.klht@gmail.com" target="_blank">Mail Address</a>
-            <a class="footer_link" href="https://www.linkedin.com/in/kane-lo-hog-tian/" target="_blank">LinkedIn</a>
-            <a class="footer_link" href="https://www.instagram.com/kanelo_97/" target="_blank">Instagram</a>
+            <a class="footerLink" href="mailto:kane.klht@gmail.com" target="_blank">Mail Address</a>
+            <a class="footerLink" href="https://www.linkedin.com/in/kane-lo-hog-tian/" target="_blank">LinkedIn</a>
+            <a class="footerLink" href="https://www.instagram.com/kanelo_97/" target="_blank">Instagram</a>
             <p class="copyright">Copyright © 2021 Kane Lo Hog Tian</p>
         </div>
    

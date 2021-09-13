@@ -27,7 +27,7 @@ $("#guess").on("input", function(){
         } else if (guessedCharacterList.indexOf(guessEntered) == -1) {
                 guessedCharacterList += ", " + guessEntered;
         }
-        document.getElementById("alreadyGuessedCharacters").innerHTML = "Guesses Made&colon; " + guessedCharacterList;
+        document.getElementById("alreadyGuessedCharacters").innerHTML = "Guesses Made: " + guessedCharacterList;
         for(var i = 0; i < randomWord.length; i++) {
             if(guessEntered === randomWord[i]) {
                 $("#" + i).attr("value", guessEntered);
@@ -37,11 +37,11 @@ $("#guess").on("input", function(){
             }
         }
         totalGuesses += 1;
-        document.getElementById("totalGuesses").innerHTML = "Total Guesses&colon; " + totalGuesses;
+        document.getElementById("totalGuesses").innerHTML = "Total Guesses: " + totalGuesses;
 
         if (!isCorrectGuess) {
             incorrectGuess += 1;
-            document.getElementById("incorrectGuesses").innerHTML = "Incorrect Guesses&colon; " + incorrectGuess;
+            document.getElementById("incorrectGuesses").innerHTML = "Incorrect Guesses: " + incorrectGuess;
         }
         determineGameStatus();
     }
@@ -52,12 +52,11 @@ function isCharactersAlreadyEntered(guessEntered) {
         document.getElementById("alreadyEntered").innerHTML = "";
         return false;
     }
-    document.getElementById("alreadyEntered").innerHTML = "<div class='alert alert-warning'><em>You already entered this guess&colon; " + guessEntered + ".</em></div><br>";
+    document.getElementById("alreadyEntered").innerHTML = "<div class='alert alert-warning'><em>You already entered this guess: " + guessEntered + ".</em></div><br>";
     return true;
 }
 
 function determineGameStatus() {
-    console.log(correctGuess);
     if (totalGuesses > maxGuesses) {
         $("#hangmanContainer").hide();
         document.getElementById("gameStatus").innerHTML = "<div class='alert alert-danger'><h4 class='text-center'>Game Lost</h4><p class='text-center'>You have exceeded the maximum number of total guesses allowed.<br>The word to be guessed was <q><b><i>" + randomWord + "</i></b></q>.</p></div><br>";
