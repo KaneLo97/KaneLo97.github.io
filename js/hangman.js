@@ -12,14 +12,13 @@ $(document).ready(function() {
     let index = Math.floor(Math.random() * (WORDLIST.length));
     // get a random word to be guessed
     randomWord = WORDLIST[index]; 
-    console.log(randomWord)
     let htmlContent = "<ul>";
     // create the boxes based on the lenght of the word to be guessed
     for (let i = 0; i < randomWord.length; i++) {
         htmlContent += '<li class="guessBox"><input type="text" class="form-control box" id="'+i+'" maxlength=1 disabled></li>'; 
     }
     htmlContent += "</ul></div>";
-    $(".guessedWord").append(htmlContent);
+    $(".guessedWord").html(htmlContent);
 });
 
 $("#guess").on("input", function() {
@@ -29,7 +28,7 @@ $("#guess").on("input", function() {
         if (guessedCharacterList.length === 0) { //player has not yet make any guesses
             guessedCharacterList += guessEntered;
         } else if (guessedCharacterList.indexOf(guessEntered) == -1) { // player has entered a character -> add it to the character list
-                guessedCharacterList += ", " + guessEntered;
+            guessedCharacterList += ", " + guessEntered;
         }
 
         $("#alreadyGuessedCharacters").text(`Guesses Made: ${guessedCharacterList}`);

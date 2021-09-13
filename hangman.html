@@ -97,9 +97,14 @@
             <div id="hangmanContainer">
                 <div class="text-center" id="alreadyEntered"></div>
                 <div class="text-center" id="invalidCharacter"></div>
-                <h5 class="text-center guessedWord"></h5>
+                <h5 class="text-center guessedWord">
+                    <!-- temporary placeholder for smoother transition -->
+                    <ul>
+                        <li class="guessBox"><input type="text" class="form-control box" id="'+i+'" maxlength=1 disabled></li>
+                    </ul>     
+                </h5>
                 <div class="text-center" id="guessContainer">
-                    <label><b>Enter your guess</b></label>
+                    <label><b>Enter your guess here</b></label>
                     <input class="form-control" type="text" name="guess" maxlength=1 id="guess" /><br><br>     
                 </div><br>
             </div> 

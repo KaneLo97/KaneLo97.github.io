@@ -44,6 +44,10 @@ ul li.guessBox {
     width: 100%;
 }
 
+input[type=text]:disabled {
+    background: #dddddd;
+}
+
 @media only screen and (max-width: 900px) {
     .footer {
         display: none;
