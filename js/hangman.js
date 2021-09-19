@@ -12,6 +12,7 @@ $(document).ready(function() {
     let index = Math.floor(Math.random() * (WORDLIST.length));
     // get a random word to be guessed
     randomWord = WORDLIST[index]; 
+    console.log(randomWord)
     let htmlContent = "<ul>";
     // create the boxes based on the lenght of the word to be guessed
     for (let i = 0; i < randomWord.length; i++) {
@@ -87,11 +88,11 @@ function isValidGuess(guessEntered) {
 
 function determineGameStatus() {
     if (totalGuesses > MAX_GUESSES) {
-       setGameStatus("<div class='alert alert-danger'><h4 class='text-center'>Game Lost</h4><p class='text-center'>You have exceeded the maximum number of total guesses allowed.<br>The word to be guessed was <q><b><i>" + randomWord + "</i></b></q>.</p></div><br>");
+       setGameStatus("<div class='alert alert-danger'><h4 class='text-center'>Game Lost <span class='fas fa-sad-tear'></span></h4><p class='text-center'>You have exceeded the maximum number of total guesses allowed.<br>The word to be guessed was <q><b><i>" + randomWord + "</i></b></q>.</p></div><br>");
     } else if (incorrectGuess > MAX_INCORRECT_GUESSES) {
-       setGameStatus("<div class='alert alert-danger'><h4 class='text-center'>Game Lost</h4><p class='text-center'>You have exceeded the maximum number of incorrect guesses allowed.<br>The word to be guessed was <q><b><i>" + randomWord + "</i></b></q>.</p></div><br>");
+       setGameStatus("<div class='alert alert-danger'><h4 class='text-center'>Game Lost <span class='fas fa-sad-tear'></span></h4><p class='text-center'>You have exceeded the maximum number of incorrect guesses allowed.<br>The word to be guessed was <q><b><i>" + randomWord + "</i></b></q>.</p></div><br>");
     } else if (correctGuess === randomWord.length) {
-        setGameStatus("<div class='alert alert-success'><h4 class='text-center'>Congrats!! Game Won</h4><p class='text-center'>You have correctly guessed the word <q><b><i>" + randomWord + "</i></b></q></div><br>");
+        setGameStatus("<div class='alert alert-success'><h4 class='text-center'>Congrats!! Game Won <span class='fas fa-smile'></span></h4><p class='text-center'>You have correctly guessed the word <q><b><i>" + randomWord + "</i></b></q></div><br>");
     }
 }
 
