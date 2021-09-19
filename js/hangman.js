@@ -50,8 +50,15 @@ $("#guess").on("input", function() {
         }
         determineGameStatus();
     }
+    clearGuessBox(); // clear the guess box after the player enters a guess
 });
 
+function clearGuessBox() {
+    // clear the guess box after 500ms
+    setTimeout(function() {
+        $("#guess").val("");
+    }, 500);
+}
 function isCharactersAlreadyEntered(guessEntered) {
     if ($.inArray(guessEntered, guessedCharacterList) == -1) { //player has not yet made this guess
         $("#alreadyEntered").html("");
