@@ -52,7 +52,13 @@ ul li.guessBox {
     padding-top: 1.5em;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1300px) {
+    .footer {
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
     .footer {
         display: none;
     }
