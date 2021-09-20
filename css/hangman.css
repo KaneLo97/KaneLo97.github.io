@@ -38,11 +38,11 @@ ul li.guessBox {
     padding: 1em;
 }
 
-.footer {
+/* .footer {
     bottom: 0;
-    position: absolute;
+    position: relative;
     width: 100%;
-}
+} */
 
 input[type=text]:disabled {
     background: #dddddd;
@@ -50,12 +50,6 @@ input[type=text]:disabled {
 
 ul li.guessBox {
     padding-top: 1.5em;
-}
-
-@media only screen and (max-width: 1300px) {
-    .footer {
-        position: relative;
-    }
 }
 
 @media only screen and (max-width: 1000px) {
