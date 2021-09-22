@@ -38,14 +38,15 @@
             </div>
         </nav>
         <div class="header text-center">
-            <h3>WELCOME TO MY HANGMAN GAME</h3>
-            <div class="text-center">
-            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#rulesModal">
-                Game Rules
-            </button>
-            </div>
+            <h3>
+                WELCOME TO MY HANGMAN GAME
+                <span>
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#rulesModal">
+                    Game Rules
+                </button>
+            </span>
+            </h3>
         </div>
-
         <div class="modal" id="rulesModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -57,8 +58,7 @@
                     </div>
                     <div class="modal-body">
                         <ol>
-                            <li>You have a maximum of 8 incorrect guesses. After 8 incorrect guesses, you lose the game.</li>
-                            <li>You have a total maximum of 15 guesses to guess the word correctly.</li>
+                            <li>You have a maximum of 6 incorrect guesses. After 6 incorrect guesses, you lose the game.</li>
                             <li>Only letters are accepted as a guess. Other characters entered are invalid.</li>
                         </ol>
                     </div>
@@ -68,8 +68,8 @@
                 </div>
             </div>
         </div>
-       
-        <div class="gameContainer container">
+        <br>
+        <div class="container">
             <div id="gameStatus"></div>
             <div class="alert alert-info">
                 <h4 class="text-center">Game Info</h4>
@@ -86,26 +86,37 @@
                 </div>
             </div><br>
 
-            <div id="hangmanContainer">
-                <div class="text-center" id="alreadyEntered"></div>
-                <div class="text-center" id="invalidCharacter"></div>
-                <h5 class="text-center guessedWord">
-                    <!-- temporary placeholder for smoother transition -->
-                    <ul>
-                        <li class="guessBox"><input type="text" class="form-control box" id="'+i+'" maxlength=1 disabled></li>
-                    </ul>     
-                </h5>
-                <div class="text-center" id="guessContainer">
-                    <label><b>Enter your guess here</b></label>
-                    <input class="form-control" type="text" name="guess" maxlength=1 id="guess" /><br><br>     
-                </div><br>
-            </div> 
+            <div class="row">
+                <div class="col-md-7 text-center" id="hangmanContainer">
+                    <div id="alreadyEntered"></div>
+                    <div id="invalidCharacter"></div>
+                    <h5 class="guessedWord">
+                        <!-- temporary placeholder for smoother transition -->
+                        <ul>
+                            <li class="guessBox"><input type="text" class="form-control box" id="'+i+'" maxlength=1 disabled></li>
+                        </ul>     
+                    </h5>
+                    <div id="guessContainer">
+                        <label><b>Enter your guess here</b></label>
+                        <input class="form-control" type="text" name="guess" maxlength=1 id="guess" /><br><br>     
+                    </div>
+                </div>
+                    <div class="col-md-5" id="hangmanImageContainer"> 
+                        <div class="d-flex justify-content-center">
+                            <img src="images/0.png" id="hangmanImage"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+       
+        <br>
+
         <div class="text-center">
             <a class="btn btn-primary " href="hangman.html">New Game</a>
         </div>
         <br><br><br><br>
-
+        
         <div class="text-center footer">
             <a class="footerLink" href="mailto:kane.klht@gmail.com" target="_blank">Mail Address</a>
             <a class="footerLink" href="https://www.linkedin.com/in/kane-lo-hog-tian/" target="_blank">LinkedIn</a>
