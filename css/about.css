@@ -11,6 +11,10 @@ body {
     padding: 2em;
 }
 
+.about_me {
+    padding-bottom: 0;
+}
+
 .grey-background a {
     color: white;
     text-decoration: underline;
