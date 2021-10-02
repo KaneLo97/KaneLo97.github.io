@@ -2,13 +2,21 @@ body {
     background-color: #F0F8FF;
 }
 
-.experience, .technical_skills {
+.grey-background {
     background-color:#708090;
     color: white;
+}
+
+.pad-2 {
     padding: 2em;
 }
 
-.experience_container, .technical_skills_container, .honours_container {
+.grey-background a {
+    color: white;
+    text-decoration: underline;
+}
+
+.section {
     margin: 2em auto;
     text-align: left;    
 }
@@ -17,7 +25,7 @@ body {
     width: 60%;
 }
 
-.technical_skills_container {
+.technical_skills_container, .reference_container {
     width: 50%;
 }
 
@@ -26,21 +34,27 @@ body {
     height: 7em;
 }
 
-.honours, .contact, .profile_info {
-    padding: 2em;
+.honours_links {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 5%;
+}
+
+.image_container {
+    padding-right: 0;
 }
 
 .header {
     padding-top: 1em;
 }
 
-ul.skills {
+ul.skills, ul.reference {
    list-style-type: circle;
 }
 
 .image {
     position: relative;
-    float: left;
+    float: right;
     margin-right: 1em;
 }
 
@@ -52,30 +66,38 @@ ul.skills {
     float: right;
 }
 
-@media only screen and (max-width: 900px) {
-    .image {
-        float: none;
-    }
-}
-
 @media only screen and (max-width: 950px) {
     .profile-image {
         float: none;
     }
     .honours_container {
         width: 60%;
-        height: 12em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .image_container {
+        text-align: center;
+    }
+    .image {
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .honours_links {
+        text-align: center;
+    }
+    .honours_container {
+        height: 11em;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .honours_container, .technical_skills_container, .experience_container {
+    .section {
         width: 100%;
     }
     .honours_container {
-        height: 15em;
-    }
-    .honour_links {
-        text-align: center;
+        height: 12em;
     }
 }
