@@ -58,12 +58,16 @@ ul.skills, ul.reference {
 
 .image {
     position: relative;
-    float: right;
+    float: left;
     margin-right: 1em;
 }
 
 .image, .contact_image {
     width: 10em;
+}
+
+#sfu {
+    float: right;
 }
 
 .profile-image {
