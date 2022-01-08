@@ -87,7 +87,7 @@ ul.skills, ul.reference {
     .image_container {
         text-align: center;
     }
-    .image {
+    .image, #sfu {
         float: none;
     }
 }
